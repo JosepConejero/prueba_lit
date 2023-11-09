@@ -1,4 +1,4 @@
-import {LitElement, html} from 'lit';
+import {LitElement, css, html} from 'lit';
 
 export class MyElement extends LitElement {
   static properties = {
@@ -9,6 +9,17 @@ export class MyElement extends LitElement {
     super();
     this.version = 'STARTING';
   }
+
+  static styles = css`
+  :host {
+    color: blue;
+  }
+  p {
+    margin: 0;
+    background-color: red;
+    padding: 0.5em;
+  }
+`;
 
   render() {
     return html`
