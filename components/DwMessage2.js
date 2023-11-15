@@ -6,7 +6,9 @@ export class DwMessage extends LitElement {
   };
 
   static styles = css`
- 
+  * {
+  outline: 1px solid red;
+}
     .fondo {
       display: flex;
       align-items: center;
@@ -59,4 +61,3 @@ export class DwMessage extends LitElement {
     `;
   }
 }
-customElements.define("dw-message", DwMessage);
