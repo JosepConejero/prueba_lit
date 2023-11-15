@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
-
-const personajes = ["a", "b", "c"];
+import "./components/login-box"
 
 export class MyElement extends LitElement {
   static properties = {
@@ -15,23 +14,27 @@ export class MyElement extends LitElement {
   static styles = css`
     :host {
       display: block;
-      border: 1px black solid;
-      color: blue;
     }
-    p {
+    
+    main {
       margin: 0;
-      background-color: red;
-      padding: 0.5em;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100vh;
+      background-color: lightgrey;
     }
+   
   `;
 
   render() {
     return html`
-      <p>Welcome to the Lit tutorial!</p>
-      <p>This is the ${this.version} code.</p>
-      <p>FUNCIONA, CAUEN TOT</p>
-      <p>${personajes.map((personaje) => `<p>${personaje}</p>`)}</p>
+      <main>
+        <login-box></login-box>
+      </main>
     `;
   }
 }
 customElements.define("my-element", MyElement);
+
+// w="300" h="700"
